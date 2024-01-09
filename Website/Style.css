@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color:  black;
+}
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color:  black;
+}
+h3{
+    font-size: 20px;
+    line-height: 20px;
+    color:  black;
+}
+h4{
+    font-size: 20px;
+    color:  black;
+}
+h5{
+    font-size: 20px;
+    font-weight: 700;
+    color:  black;
+}
+h6{
+    font-size: 15px;
+    line-height: 30px;
+    color:  black;
+}
+p{
+    font-size: 20px;
+    margin: 20px 0 20px 0;
+    color:  rgb(206, 205, 205);
+}
+span{
+    font-size: 20px;
+    line-height: 20px;
+    color: #ccc6c6;
+}
+h7{
+    font-size: 40px;
+    line-height: 20px;
+    color:  black;
+}
+.section-p1{
+    padding: 40px 80px;
+}
+.section-m1{
+    margin: 40px 0;
+}
+body{
+    width: 100%;
+}
+#navbar {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar li {
+    padding: 0 20px; /* Adjust the spacing as needed */
+}
+
+#navbar li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+#cart-button img {
+    width: 20px; /* Adjust the size as needed */
+    height: 20px; /* Adjust the size as needed */
+}
+/*header*/
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: #E6E6FA;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow with a darker color */
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+}
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    transition: 0.3s ease;
+    position: relative; /* Add this line */
+    display: inline-block; /* Add this line to ensure the pseudo-element aligns correctly */
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: #85D8FC;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 100%; /* This will make the underline the full width of the text */
+    height: 2px;
+    background: #85D8FC;
+    position: absolute;
+    bottom: -4px; /* Adjust if necessary */
+    left: 0; /* Updated to align with the start of the text */
+}
+/* ... other styles ... */
+#main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+#product1 {
+        display: flex;
+        flex-wrap: wrap; /* Allows items to wrap onto the next line */
+        justify-content: center; /* Center children horizontally */
+        align-items: center; /* Center children vertically */
+        gap: 30px;
+}
+
+
+#product1 .pro img {
+    max-width: 100%; /* Ensure the image is fully responsive */
+    max-height: 100%; /* Optional: limits the image height to its container */
+    border-radius: 20px;
+}
+#product1.pro{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    
+}
+/* Existing styles... */
+
+.product-container {
+    position: relative;
+    text-align: center; /* Center text within overlays */
+    max-width: 300px; /* Adjust width as needed */
+    margin: auto; /* Center the container */
+}
+
+.product-container img {
+    width: 100%; /* Make image responsive */
+    display: block; /* Remove bottom space */
+    border-radius: 20px; /* Rounded corners */
+}
+
+.text-overlay {
+    position: absolute;
+    width: 100%; /* Overlay should cover the image width */
+    color: black; /* Text color */
+}
+
+.pro {
+    position: relative;
+    width: 45%;
+    min-width: 200px;
+    margin: auto; /* Center the .pro container */
+    border: 5px solid #fff0db; /* Adjust the color and width as needed */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    cursor: pointer;
+    margin: 5px 0;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    transition: 0.2s ease;
+    background-color: #E6E6FA;
+}
+.pro:hover{
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+
+}
+
+.pro img {
+    max-width: 80%; /* Adjust the width percentage as needed */
+    height: auto;
+    display: block; /* Ensures the image does not have extra space below it */
+    margin-bottom: 20px; /* Space between the image and the text below */
+}
+
+/* Add this to position the text on top of the image */
+.pro .top-overlay {
+    position: absolute;
+    top: -85px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+}
+.pro .middle-overlay{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* Add this to position the text at the bottom of the image */
+.pro .bottom-overlay {
+    position: absolute;
+    bottom: -90px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+}
+
+
+
+
